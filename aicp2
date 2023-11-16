@@ -1,0 +1,50 @@
+def display_menu(student_id):
+    print(f"Student ID: {student_id}")
+    print("1. Display the bill of slab 1 and slab 2")
+    print("2. Display the bill of slab 3")
+    print("Press any other key to exit")
+
+def costSlab1(matrix):
+    # Assuming the matrix is a 2D list
+    slab1_data = matrix[0]
+    unit_cost = 10
+    unit_range = (0, 100)
+    total_cost = sum(unit_cost * units for units in slab1_data)
+
+    print(f"Bill for Slab 1 (Unit Range: {unit_range}, Cost per unit: Rs.{unit_cost}): Rs.{total_cost}")
+
+def costSlab2(matrix):
+    slab2_data = matrix[1]
+    unit_cost = 15
+    unit_range = (101, 200)
+    total_cost = sum(unit_cost * units for units in slab2_data)
+
+    print(f"Bill for Slab 2 (Unit Range: {unit_range}, Cost per unit: Rs.{unit_cost}): Rs.{total_cost}")
+
+def costSlab3(matrix):
+    slab3_data = matrix[2]
+    unit_cost = 20
+    unit_range = (201, 300)
+    total_cost = sum(unit_cost * units for units in slab3_data)
+
+    print(f"Bill for Slab 3 (Unit Range: {unit_range}, Cost per unit: Rs.{unit_cost}): Rs.{total_cost}")
+
+# Sample source data (replace this with your actual data)
+source_matrix = [
+    [50, 75, 30, 90, 110],  # Slab 1 data
+    [120, 150, 180, 200, 250],  # Slab 2 data
+    [210, 230, 270, 290, 310]  # Slab 3 data
+]
+
+# Sample student ID (replace this with the actual ID)
+student_id = "12345"
+
+while True:
+    display_menu(student_id)
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        costSlab1(source_matrix)
+        costSlab2(source_matrix)
+    elif choice == '2':
+        costSl
